@@ -41,7 +41,6 @@ using Microsoft.Extensions.DependencyInjection;
 var services = new ServiceCollection()
   .AddLogging()
   .Add2hireRestApi(Configuration);
-ServiceProvider = services.BuildServiceProvider();
 ```
 
 - Use the repositories (enjoy a simple, yet optimized, HTTP client)
@@ -56,7 +55,7 @@ public MyService(IPersonalVehicleRepository personalVehicleRepository)
     _personalVehicleRepository = personalVehicleRepository;
 }
 
-public Task GetVehicles()
+public async Task GetVehicles()
 {
     var vehicles = await _personalVehicleRepository.FindAllAsync();
 }
