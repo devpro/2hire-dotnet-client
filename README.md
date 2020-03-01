@@ -6,5 +6,90 @@
 
 .NET client for [2hire.io](https://2hire.io/) solution to manage a fleet of connected vehicles.
 
-[![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Client.Domain.svg)](https://www.nuget.org/packages/Devpro.Twohire.Client.Domain/)
-[![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Client.Infrastructure.RestApi.svg)](https://www.nuget.org/packages/Devpro.Twohire.Client.Infrastructure.RestApi/)
+Package | Version | Type
+------- | ------- | ----
+`Devpro.Twohire.Client.Domain` | [![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Client.Domain.svg)](https://www.nuget.org/packages/Devpro.Twohire.Client.Domain/) | .NET Standard 2.1
+`Devpro.Twohire.Client.Infrastructure.RestApi` | [![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Client.Infrastructure.RestApi.svg)](https://www.nuget.org/packages/Devpro.Twohire.Client.Infrastructure.RestApi/) | .NET Standard 2.1
+
+## How to use
+
+- Have the [NuGet package](https://www.nuget.org/packages/Devpro.Twohire.Client.Infrastructure.RestApi) in your csproj file (can be done manually, with Visual Studio or through nuget command)
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Devpro.Twohire.Client.Infrastructure.RestApi" Version="X.Y.Z" />
+  </ItemGroup>
+</Project>
+```
+
+- Make the code changes to be able to use the library (config & service provider)
+
+```csharp
+// implement the configuration interface (for instance in a configuration class in your app project)
+using Devpro.Twohire.Client.Infrastructure.RestApi;
+
+public class AppConfiguration : ITwohireRestApiConfiguration
+{
+    // explicitely choose where to take the configuration for 2hire REST API (this is the responibility of the app, not the library)
+}
+
+// configure your service provider (for instance in your app Startup class)
+using Devpro.Twohire.Client.Infrastructure.RestApi.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
+
+var services = new ServiceCollection()
+  .AddLogging()
+  .Add2hireRestApi(Configuration);
+ServiceProvider = services.BuildServiceProvider();
+```
+
+- Use the repositories (enjoy a simple, yet optimized, HTTP client)
+
+```csharp
+using Devpro.Twohire.Client.Domain.Repositories;
+
+private readonly IPersonalVehicleRepository _personalVehicleRepository;
+
+public MyService(IPersonalVehicleRepository personalVehicleRepository)
+{
+    _personalVehicleRepository = personalVehicleRepository;
+}
+
+public Task GetVehicles()
+{
+    var vehicles = await _personalVehicleRepository.FindAllAsync();
+}
+```
+
+## How to build
+
+```bash
+dotnet restore
+dotnet build
+```
+
+## How to test
+
+For integration tests, to manage the configuration (secrets) you can create a file at the root directory called `Local.runsettings` or define them as environment variables:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <TwoHire_Sandbox_BaseUrl>xxx</TwoHire_Sandbox_BaseUrl>
+      <TwoHire_Sandbox_ApiVersion>xxx</TwoHire_Sandbox_ApiVersion>
+      <TwoHire_Sandbox_ServiceToken>xxx</TwoHire_Sandbox_ServiceToken>
+      <TwoHire_Sandbox_Username>xxx</TwoHire_Sandbox_Username>
+      <TwoHire_Sandbox_Password>xxx</TwoHire_Sandbox_Password>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>
+```
+
+And execute all tests (unit and integration ones):
+
+```bash
+dotnet test --settings Local.runsettings
+```
