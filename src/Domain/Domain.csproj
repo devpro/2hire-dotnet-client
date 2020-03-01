@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Devpro.Twohire.Client.Domain</AssemblyName>
+    <RootNamespace>Devpro.Twohire.Client.Domain</RootNamespace>
+    <ProjectGuid>{E6F0A7BC-55AE-4372-A554-889B07C9ADB0}</ProjectGuid>
+    <Authors>devprofr</Authors>
+    <Description>A package that provides domain classes to connect to 2hire system, this high level abstraction is needed to be able to design a loosely coupled system.</Description>
+    <RepositoryUrl>https://github.com/devpro/withywoods</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/devpro/withywoods</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+</Project>
