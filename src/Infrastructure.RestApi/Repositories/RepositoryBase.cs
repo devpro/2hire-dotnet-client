@@ -42,7 +42,7 @@ namespace Devpro.Twohire.Client.Infrastructure.RestApi.Repositories
         protected virtual async Task<T> GetAsync<T>(string url) where T : class
         {
             var client = HttpClientFactory.CreateClient(Configuration.HttpClientName);
-            SetBearerToken(client);
+            EnrichRequestHeaders(client);
 
             Logger.LogDebug($"Async GET call initiated [HttpRequestUrl={url}]");
             var response = await client.GetAsync(url);
@@ -75,7 +75,7 @@ namespace Devpro.Twohire.Client.Infrastructure.RestApi.Repositories
         protected virtual async Task<T> PostAsync<T>(string url, object body) where T : class
         {
             var client = HttpClientFactory.CreateClient(Configuration.HttpClientName);
-            SetBearerToken(client);
+            EnrichRequestHeaders(client);
 
             Logger.LogDebug($"Async POST call initiated [HttpRequestUrl={url}]");
             var response = await client.PostAsync(url, new StringContent(body.ToJson(), Encoding.UTF8, "application/json"));
@@ -105,7 +105,7 @@ namespace Devpro.Twohire.Client.Infrastructure.RestApi.Repositories
             }
         }
 
-        private void SetBearerToken(HttpClient client)
+        private void EnrichRequestHeaders(HttpClient client)
         {
             client.DefaultRequestHeaders.Add("x-service-token", Configuration.ServiceToken);
             if (_tokenProvider?.Token != null)

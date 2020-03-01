@@ -34,7 +34,6 @@ namespace Devpro.Twohire.Client.Infrastructure.RestApi.DependencyInjection
                 {
                     client.DefaultRequestHeaders.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
                 });
 
             return services;
