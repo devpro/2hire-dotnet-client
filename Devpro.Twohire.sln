@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Abstractions", "src\Domain\Twohire.Abstractions.csproj", "{E6F0A7BC-55AE-4372-A554-889B07C9ADB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Abstractions", "src\Twohire.Abstractions\Twohire.Abstractions.csproj", "{E6F0A7BC-55AE-4372-A554-889B07C9ADB0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90173BE7-2142-4050-8DA9-4C66F500EA3A}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,11 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Client", "src\Infrastructure.RestApi\Twohire.Client.csproj", "{3A04400E-D128-41E9-9C84-B69230C62B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Client", "src\Twohire.Client\Twohire.Client.csproj", "{3A04400E-D128-41E9-9C84-B69230C62B68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Client.IntegrationTests", "test\Infrastructure.RestApi.IntegrationTests\Twohire.Client.IntegrationTests.csproj", "{7B093A0E-802D-4A46-803D-DB28B140631A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Client.IntegrationTests", "test\Twohire.Client.IntegrationTests\Twohire.Client.IntegrationTests.csproj", "{7B093A0E-802D-4A46-803D-DB28B140631A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Client.UnitTests", "test\Infrastructure.RestApi.UnitTests\Twohire.Client.UnitTests.csproj", "{E1030412-92CB-43DA-8522-EC0E2B4CD3A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twohire.Client.UnitTests", "test\Twohire.Client.UnitTests\Twohire.Client.UnitTests.csproj", "{E1030412-92CB-43DA-8522-EC0E2B4CD3A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
