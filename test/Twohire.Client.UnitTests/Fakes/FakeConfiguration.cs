@@ -1,4 +1,4 @@
-﻿namespace Devpro.Twohire.Client.Infrastructure.RestApi.UnitTests.Fakes
+﻿namespace Devpro.Twohire.Client.UnitTests.Fakes
 {
     public class FakeConfiguration : ITwohireRestApiConfiguration
     {

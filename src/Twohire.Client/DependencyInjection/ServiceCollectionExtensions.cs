@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.DependencyInjection
+namespace Devpro.Twohire.Client.DependencyInjection
 {
     /// <summary>
     /// Service collection. extensions.
@@ -25,9 +25,9 @@ namespace Devpro.Twohire.Client.Infrastructure.RestApi.DependencyInjection
             }
 
             services.TryAddTransient<ITwohireRestApiConfiguration, T>();
-            services.TryAddSingleton<Domain.Providers.ITokenProvider, Providers.TokenProvider>();
-            services.TryAddTransient<Domain.Repositories.IPersonalVehicleRepository, Repositories.PersonalVehicleRepository>();
-            services.TryAddTransient<Domain.Repositories.ITokenRepository, Repositories.TokenRepository>();
+            services.TryAddSingleton<Abstractions.Providers.ITokenProvider, Providers.TokenProvider>();
+            services.TryAddTransient<Abstractions.Repositories.IPersonalVehicleRepository, Repositories.PersonalVehicleRepository>();
+            services.TryAddTransient<Abstractions.Repositories.ITokenRepository, Repositories.TokenRepository>();
 
             services
                 .AddHttpClient(configuration.HttpClientName, client =>

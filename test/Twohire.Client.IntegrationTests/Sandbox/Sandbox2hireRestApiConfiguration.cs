@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.IntegrationTests.Sandbox
+namespace Devpro.Twohire.Client.IntegrationTests.Sandbox
 {
     public class Sandbox2hireRestApiConfiguration : ITwohireRestApiConfiguration
     {

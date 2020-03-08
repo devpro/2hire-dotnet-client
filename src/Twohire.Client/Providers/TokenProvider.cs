@@ -1,9 +1,9 @@
 ﻿using System;
-using Devpro.Twohire.Client.Domain.Providers;
-using Devpro.Twohire.Client.Domain.Repositories;
+using Devpro.Twohire.Abstractions.Providers;
+using Devpro.Twohire.Abstractions.Repositories;
 using Microsoft.Extensions.Logging;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.Providers
+namespace Devpro.Twohire.Client.Providers
 {
     public class TokenProvider : ITokenProvider
     {

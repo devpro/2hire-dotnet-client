@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.Dto
+namespace Devpro.Twohire.Client.Dto
 {
     public class TokenDto
     {

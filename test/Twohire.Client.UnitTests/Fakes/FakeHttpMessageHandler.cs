@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.UnitTests.Fakes
+namespace Devpro.Twohire.Client.UnitTests.Fakes
 {
     public class FakeHttpMessageHandler : HttpMessageHandler
     {

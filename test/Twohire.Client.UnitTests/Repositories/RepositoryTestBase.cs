@@ -1,10 +1,10 @@
 ﻿using System.Net.Http;
-using Devpro.Twohire.Client.Domain.Providers;
-using Devpro.Twohire.Client.Infrastructure.RestApi.UnitTests.Fakes;
+using Devpro.Twohire.Abstractions.Providers;
+using Devpro.Twohire.Client.UnitTests.Fakes;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.UnitTests.Repositories
+namespace Devpro.Twohire.Client.UnitTests.Repositories
 {
     public abstract class RepositoryTestBase
     {

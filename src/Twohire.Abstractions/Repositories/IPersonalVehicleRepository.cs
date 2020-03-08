@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Devpro.Twohire.Client.Domain.Repositories
+namespace Devpro.Twohire.Abstractions.Repositories
 {
     /// <summary>
     /// Personal vehicle repository.

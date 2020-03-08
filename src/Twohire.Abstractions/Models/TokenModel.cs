@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Devpro.Twohire.Client.Domain.Models
+namespace Devpro.Twohire.Abstractions.Models
 {
     public class TokenModel
     {

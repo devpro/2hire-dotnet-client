@@ -1,4 +1,4 @@
-﻿namespace Devpro.Twohire.Client.Domain.Providers
+﻿namespace Devpro.Twohire.Abstractions.Providers
 {
     /// <summary>
     /// Token provider.

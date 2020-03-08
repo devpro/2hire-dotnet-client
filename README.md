@@ -8,17 +8,17 @@
 
 Package | Version | Type
 ------- | ------- | ----
-`Devpro.Twohire.Client.Domain` | [![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Client.Domain.svg)](https://www.nuget.org/packages/Devpro.Twohire.Client.Domain/) | .NET Standard 2.1
-`Devpro.Twohire.Client.Infrastructure.RestApi` | [![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Client.Infrastructure.RestApi.svg)](https://www.nuget.org/packages/Devpro.Twohire.Client.Infrastructure.RestApi/) | .NET Standard 2.1
+`Devpro.Twohire.Abstractions` | [![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Abstractions.svg)](https://www.nuget.org/packages/Devpro.Twohire.Abstractions/) | .NET Standard 2.1
+`Devpro.Twohire.Client` | [![Version](https://img.shields.io/nuget/v/Devpro.Twohire.Client.svg)](https://www.nuget.org/packages/Devpro.Twohire.Client/) | .NET Standard 2.1
 
 ## How to use
 
-- Have the [NuGet package](https://www.nuget.org/packages/Devpro.Twohire.Client.Infrastructure.RestApi) in your csproj file (can be done manually, with Visual Studio or through nuget command)
+- Have the [NuGet package](https://www.nuget.org/packages/Devpro.Twohire.Client) in your csproj file (can be done manually, with Visual Studio or through nuget command)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="Devpro.Twohire.Client.Infrastructure.RestApi" Version="X.Y.Z" />
+    <PackageReference Include="Devpro.Twohire.Client" Version="X.Y.Z" />
   </ItemGroup>
 </Project>
 ```
@@ -27,7 +27,7 @@ Package | Version | Type
 
 ```csharp
 // implement the configuration interface (for instance in a configuration class in your app project)
-using Devpro.Twohire.Client.Infrastructure.RestApi;
+using Devpro.Twohire.Client;
 
 public class AppConfiguration : ITwohireRestApiConfiguration
 {
@@ -35,7 +35,7 @@ public class AppConfiguration : ITwohireRestApiConfiguration
 }
 
 // configure your service provider (for instance in your app Startup class)
-using Devpro.Twohire.Client.Infrastructure.RestApi.DependencyInjection;
+using Devpro.Twohire.Client.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
 var services = new ServiceCollection()
@@ -46,7 +46,7 @@ var services = new ServiceCollection()
 - Use the repositories (enjoy a simple, yet optimized, HTTP client)
 
 ```csharp
-using Devpro.Twohire.Client.Domain.Repositories;
+using Devpro.Twohire.Abstractions.Repositories;
 
 private readonly IPersonalVehicleRepository _personalVehicleRepository;
 

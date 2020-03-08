@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Devpro.Twohire.Client.Domain.Repositories;
-using Devpro.Twohire.Client.Infrastructure.RestApi.Repositories;
+using Devpro.Twohire.Abstractions.Repositories;
+using Devpro.Twohire.Client.Repositories;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Xunit;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.IntegrationTests.Sandbox
+namespace Devpro.Twohire.Client.IntegrationTests.Sandbox
 {
     [Trait("Environment", "Sandbox")]
     public class TokenRepositorySandboxIntegrationTest : RepositoryIntegrationTestBase

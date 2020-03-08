@@ -1,13 +1,13 @@
 ﻿using System.Net.Http;
-using Devpro.Twohire.Client.Domain.Providers;
-using Devpro.Twohire.Client.Domain.Repositories;
-using Devpro.Twohire.Client.Infrastructure.RestApi.DependencyInjection;
-using Devpro.Twohire.Client.Infrastructure.RestApi.UnitTests.Fakes;
+using Devpro.Twohire.Abstractions.Providers;
+using Devpro.Twohire.Abstractions.Repositories;
+using Devpro.Twohire.Client.DependencyInjection;
+using Devpro.Twohire.Client.UnitTests.Fakes;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.UnitTests.DependencyInjection
+namespace Devpro.Twohire.Client.UnitTests.DependencyInjection
 {
     [Trait("Category", "UnitTests")]
     public class ServiceCollectionExtensionsTest

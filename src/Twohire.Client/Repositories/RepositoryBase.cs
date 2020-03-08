@@ -3,12 +3,12 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Devpro.Twohire.Client.Domain.Exceptions;
-using Devpro.Twohire.Client.Domain.Providers;
+using Devpro.Twohire.Abstractions.Exceptions;
+using Devpro.Twohire.Abstractions.Providers;
 using Microsoft.Extensions.Logging;
 using Withywoods.Serialization.Json;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.Repositories
+namespace Devpro.Twohire.Client.Repositories
 {
     public abstract class RepositoryBase
     {

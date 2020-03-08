@@ -4,16 +4,16 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using AutoFixture;
-using Devpro.Twohire.Client.Domain.Repositories;
-using Devpro.Twohire.Client.Infrastructure.RestApi.Dto;
-using Devpro.Twohire.Client.Infrastructure.RestApi.Repositories;
+using Devpro.Twohire.Abstractions.Repositories;
+using Devpro.Twohire.Client.Dto;
+using Devpro.Twohire.Client.Repositories;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Withywoods.Serialization.Json;
 using Xunit;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.UnitTests.Repositories
+namespace Devpro.Twohire.Client.UnitTests.Repositories
 {
     [Trait("Category", "UnitTests")]
     public class PersonalVehicleRepositoryTest : RepositoryTestBase

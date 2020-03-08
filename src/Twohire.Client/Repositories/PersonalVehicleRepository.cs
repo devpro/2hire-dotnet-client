@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Devpro.Twohire.Client.Domain.Providers;
-using Devpro.Twohire.Client.Domain.Repositories;
-using Devpro.Twohire.Client.Infrastructure.RestApi.Dto;
+using Devpro.Twohire.Abstractions.Providers;
+using Devpro.Twohire.Abstractions.Repositories;
+using Devpro.Twohire.Client.Dto;
 using Microsoft.Extensions.Logging;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.Repositories
+namespace Devpro.Twohire.Client.Repositories
 {
     public class PersonalVehicleRepository : RepositoryBase, IPersonalVehicleRepository
     {

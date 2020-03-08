@@ -1,7 +1,7 @@
-﻿using Devpro.Twohire.Client.Infrastructure.RestApi.DependencyInjection;
+﻿using Devpro.Twohire.Client.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.IntegrationTests.Sandbox
+namespace Devpro.Twohire.Client.IntegrationTests.Sandbox
 {
     public class RepositoryIntegrationTestBase
     {

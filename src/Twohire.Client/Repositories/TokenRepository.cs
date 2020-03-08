@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Devpro.Twohire.Client.Domain.Models;
-using Devpro.Twohire.Client.Domain.Repositories;
-using Devpro.Twohire.Client.Infrastructure.RestApi.Dto;
+using Devpro.Twohire.Abstractions.Models;
+using Devpro.Twohire.Abstractions.Repositories;
+using Devpro.Twohire.Client.Dto;
 using Microsoft.Extensions.Logging;
 
-namespace Devpro.Twohire.Client.Infrastructure.RestApi.Repositories
+namespace Devpro.Twohire.Client.Repositories
 {
     public class TokenRepository : RepositoryBase, ITokenRepository
     {

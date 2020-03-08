@@ -1,4 +1,4 @@
-﻿namespace Devpro.Twohire.Client.Infrastructure.RestApi
+﻿namespace Devpro.Twohire.Client
 {
     /// <summary>
     /// 2hire REST API configuration.

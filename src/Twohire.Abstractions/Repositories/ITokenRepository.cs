@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Devpro.Twohire.Client.Domain.Models;
+using Devpro.Twohire.Abstractions.Models;
 
-namespace Devpro.Twohire.Client.Domain.Repositories
+namespace Devpro.Twohire.Abstractions.Repositories
 {
     /// <summary>
     /// Token repository.

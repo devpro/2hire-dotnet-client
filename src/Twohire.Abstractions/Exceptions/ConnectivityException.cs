@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Devpro.Twohire.Client.Domain.Exceptions
+namespace Devpro.Twohire.Abstractions.Exceptions
 {
     [Serializable]
     public class ConnectivityException : Exception
