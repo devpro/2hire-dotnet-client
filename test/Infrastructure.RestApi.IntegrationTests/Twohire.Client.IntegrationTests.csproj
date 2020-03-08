@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Devpro.Twohire.Client.Infrastructure.RestApi.IntegrationTests</AssemblyName>
-    <RootNamespace>Devpro.Twohire.Client.Infrastructure.RestApi.IntegrationTests</RootNamespace>
+    <AssemblyName>Devpro.Twohire.Client.IntegrationTests</AssemblyName>
+    <RootNamespace>Devpro.Twohire.Client.IntegrationTests</RootNamespace>
     <ProjectGuid>{7B093A0E-802D-4A46-803D-DB28B140631A}</ProjectGuid>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -33,8 +33,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Domain\Domain.csproj" />
-    <ProjectReference Include="..\..\src\Infrastructure.RestApi\Infrastructure.RestApi.csproj" />
+    <ProjectReference Include="..\..\src\Domain\Twohire.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure.RestApi\Twohire.Client.csproj" />
   </ItemGroup>
 
 </Project>

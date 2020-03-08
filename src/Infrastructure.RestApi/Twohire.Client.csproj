@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>Devpro.Twohire.Client.Infrastructure.RestApi</AssemblyName>
-    <RootNamespace>Devpro.Twohire.Client.Infrastructure.RestApi</RootNamespace>
+    <AssemblyName>Devpro.Twohire.Client</AssemblyName>
+    <RootNamespace>Devpro.Twohire.Client</RootNamespace>
     <ProjectGuid>{3A04400E-D128-41E9-9C84-B69230C62B68}</ProjectGuid>
     <Authors>devprofr</Authors>
     <Description>A package that is the concrete implementation of 2hire Domain interfaces, by making calls to 2hire REST API.</Description>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Domain\Twohire.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
