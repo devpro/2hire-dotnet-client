@@ -40,7 +40,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 var services = new ServiceCollection()
   .AddLogging()
-  .Add2hireRestApi(Configuration);
+  .AddTwohireClient(Configuration);
 ```
 
 - Use the repositories (enjoy a simple, yet optimized, HTTP client)
