@@ -1,6 +1,6 @@
-﻿namespace Devpro.Twohire.Client.Dto
+﻿namespace Devpro.Twohire.Abstractions.Models
 {
-    public class ResponseDto<T>
+    public class ResponseModel<T>
     {
         public bool Status { get; set; }
         public object Error { get; set; }

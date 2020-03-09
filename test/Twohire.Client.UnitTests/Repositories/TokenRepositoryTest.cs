@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using AutoFixture;
+using Devpro.Twohire.Abstractions.Models;
 using Devpro.Twohire.Abstractions.Repositories;
 using Devpro.Twohire.Client.Dto;
 using Devpro.Twohire.Client.Repositories;
@@ -22,7 +23,7 @@ namespace Devpro.Twohire.Client.UnitTests.Repositories
         {
             // Arrange
             var fixture = new Fixture();
-            var responseDto = fixture.Create<ResponseDto<TokenDataDto>>();
+            var responseDto = fixture.Create<ResponseModel<TokenDataDto>>();
             var httpResponseMessage = new HttpResponseMessage
             {
                 StatusCode = HttpStatusCode.OK,

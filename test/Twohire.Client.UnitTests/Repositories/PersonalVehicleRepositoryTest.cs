@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using AutoFixture;
+using Devpro.Twohire.Abstractions.Models;
 using Devpro.Twohire.Abstractions.Repositories;
-using Devpro.Twohire.Client.Dto;
 using Devpro.Twohire.Client.Repositories;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,11 +22,11 @@ namespace Devpro.Twohire.Client.UnitTests.Repositories
         {
             // Arrange
             var fixture = new Fixture();
-            var responseDto = fixture.Create<ResponseDto<List<object>>>();
+            var responseModel = fixture.Create<ResponseModel<List<object>>>();
             var httpResponseMessage = new HttpResponseMessage
             {
                 StatusCode = HttpStatusCode.OK,
-                Content = new StringContent(responseDto.ToJson())
+                Content = new StringContent(responseModel.ToJson())
             };
             var repository = BuildRepository(httpResponseMessage, HttpMethod.Get, $"http://does.not.exist/v42/admin/api/personal/vehicle");
 
@@ -35,7 +34,8 @@ namespace Devpro.Twohire.Client.UnitTests.Repositories
             var output = await repository.FindAllAsync();
 
             // Assert
-            output.Should().NotBeNullOrEmpty();
+            output.Should().NotBeNull();
+            output.Should().BeEquivalentTo(responseModel);
         }
 
         private IPersonalVehicleRepository BuildRepository(HttpResponseMessage httpResponseMessage, HttpMethod httpMethod, string absoluteUri)

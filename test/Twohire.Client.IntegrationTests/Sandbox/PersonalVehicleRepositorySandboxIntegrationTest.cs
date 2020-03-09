@@ -23,7 +23,10 @@ namespace Devpro.Twohire.Client.IntegrationTests.Sandbox
             var output = await repository.FindAllAsync();
 
             // Assert
-            output.Should().NotBeNullOrEmpty();
+            output.Should().NotBeNull();
+            output.Error.Should().BeNull();
+            output.Status.Should().BeTrue();
+            output.Data.Should().NotBeEmpty();
         }
 
         private IPersonalVehicleRepository BuildRepository()

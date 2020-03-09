@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Devpro.Twohire.Abstractions.Models;
 
 namespace Devpro.Twohire.Abstractions.Repositories
 {
@@ -8,6 +9,6 @@ namespace Devpro.Twohire.Abstractions.Repositories
     /// </summary>
     public interface IPersonalVehicleRepository
     {
-        Task<List<object>> FindAllAsync();
+        Task<ResponseModel<List<object>>> FindAllAsync();
     }
 }

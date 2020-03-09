@@ -25,7 +25,7 @@ namespace Devpro.Twohire.Client.Repositories
                 username = Configuration.Username,
                 password = Configuration.Password
             };
-            var output = await PostAsync<ResponseDto<TokenDataDto>>(url, input);
+            var output = await PostAsync<ResponseModel<TokenDataDto>>(url, input);
             return new TokenModel
             {
                 Value = output.Data.Token.Code,
