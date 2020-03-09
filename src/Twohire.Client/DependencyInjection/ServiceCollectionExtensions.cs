@@ -16,12 +16,17 @@ namespace Devpro.Twohire.Client.DependencyInjection
         /// <typeparam name="T">Instance of <see cref="ITwohireRestApiConfiguration"/></typeparam>
         /// <param name="services">Collection of services that will be completed</param>
         /// <returns></returns>
-        public static IServiceCollection Add2hireRestApi<T>(this IServiceCollection services, T configuration)
+        public static IServiceCollection AddTwohireClient<T>(this IServiceCollection services, T configuration)
             where T : class, ITwohireRestApiConfiguration
         {
             if (services == null)
             {
                 throw new ArgumentNullException(nameof(services));
+            }
+
+            if (configuration == null)
+            {
+                throw new ArgumentNullException(nameof(configuration));
             }
 
             services.TryAddTransient<ITwohireRestApiConfiguration, T>();

@@ -11,7 +11,7 @@ namespace Devpro.Twohire.Client.IntegrationTests.Sandbox
 
             var services = new ServiceCollection()
                 .AddLogging()
-                .Add2hireRestApi(Configuration);
+                .AddTwohireClient(Configuration);
             ServiceProvider = services.BuildServiceProvider();
         }
 
