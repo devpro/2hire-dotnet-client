@@ -43,7 +43,7 @@ namespace Devpro.Twohire.Client.UnitTests.Repositories
         private ITokenRepository BuildRepository(HttpResponseMessage httpResponseMessage, HttpMethod httpMethod, string absoluteUri)
         {
             var logger = ServiceProvider.GetService<ILogger<TokenRepository>>();
-            var httpClientFactoryMock = BuildHttpClientFactory(httpResponseMessage, httpMethod, absoluteUri);
+            var httpClientFactoryMock = BuildHttpClientFactory(httpResponseMessage, httpMethod, "Fake", absoluteUri);
 
             return new TokenRepository(Configuration, logger, httpClientFactoryMock.Object);
         }

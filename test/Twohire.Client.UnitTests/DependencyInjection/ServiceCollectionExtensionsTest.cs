@@ -28,6 +28,7 @@ namespace Devpro.Twohire.Client.UnitTests.DependencyInjection
             services.GetRequiredService<IPersonalVehicleRepository>().Should().NotBeNull();
             services.GetRequiredService<ITokenRepository>().Should().NotBeNull();
         }
+
         [Fact]
         public void AddTwohireClient_ShouldProvideProviders()
         {
