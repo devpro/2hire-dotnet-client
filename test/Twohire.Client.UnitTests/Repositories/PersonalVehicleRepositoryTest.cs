@@ -41,7 +41,7 @@ namespace Devpro.Twohire.Client.UnitTests.Repositories
         private IPersonalVehicleRepository BuildRepository(HttpResponseMessage httpResponseMessage, HttpMethod httpMethod, string absoluteUri)
         {
             var logger = ServiceProvider.GetService<ILogger<PersonalVehicleRepository>>();
-            var httpClientFactoryMock = BuildHttpClientFactory(httpResponseMessage, httpMethod, absoluteUri);
+            var httpClientFactoryMock = BuildHttpClientFactory(httpResponseMessage, httpMethod, "Fake", absoluteUri);
             TokenProviderMock.Setup(x => x.Token).Returns("loveDotNet");
 
             return new PersonalVehicleRepository(Configuration, logger, httpClientFactoryMock.Object, TokenProviderMock.Object);
