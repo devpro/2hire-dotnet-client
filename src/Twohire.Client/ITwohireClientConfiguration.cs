@@ -1,9 +1,9 @@
 ﻿namespace Devpro.Twohire.Client
 {
     /// <summary>
-    /// 2hire REST API configuration.
+    /// 2hire client configuration.
     /// </summary>
-    public interface ITwohireRestApiConfiguration
+    public interface ITwohireClientConfiguration
     {
         /// <summary>
         /// 2hire REST Api base URL.

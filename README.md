@@ -26,10 +26,10 @@ Package | Version | Type
 - Make the code changes to be able to use the library (config & service provider)
 
 ```csharp
-// implement the configuration interface (for instance in a configuration class in your app project)
+// implement the configuration interface (for instance in a configuration class in your app project) or use DefaultTwohireClientConfiguration
 using Devpro.Twohire.Client;
 
-public class AppConfiguration : ITwohireRestApiConfiguration
+public class AppConfiguration : ITwohireClientConfiguration
 {
     // explicitely choose where to take the configuration for 2hire REST API (this is the responibility of the app, not the library)
 }

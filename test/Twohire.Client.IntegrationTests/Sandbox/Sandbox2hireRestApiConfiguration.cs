@@ -2,7 +2,7 @@
 
 namespace Devpro.Twohire.Client.IntegrationTests.Sandbox
 {
-    public class Sandbox2hireRestApiConfiguration : ITwohireRestApiConfiguration
+    public class Sandbox2hireRestApiConfiguration : ITwohireClientConfiguration
     {
         public string BaseUrl => Environment.GetEnvironmentVariable("TwoHire_Sandbox_BaseUrl");
 
