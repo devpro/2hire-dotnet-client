@@ -11,7 +11,7 @@ namespace Devpro.Twohire.Client.Repositories
         private readonly ITokenProvider _tokenProvider;
 
         protected RepositoryBase(
-            ITwohireRestApiConfiguration configuration,
+            ITwohireClientConfiguration configuration,
             ILogger logger,
             IHttpClientFactory httpClientFactory,
             ITokenProvider tokenProvider)
@@ -21,7 +21,7 @@ namespace Devpro.Twohire.Client.Repositories
             _tokenProvider = tokenProvider;
         }
 
-        protected ITwohireRestApiConfiguration Configuration { get; }
+        protected ITwohireClientConfiguration Configuration { get; }
 
         protected abstract string ResourceName { get; }
 

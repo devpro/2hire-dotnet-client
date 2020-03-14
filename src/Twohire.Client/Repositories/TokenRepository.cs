@@ -10,7 +10,7 @@ namespace Devpro.Twohire.Client.Repositories
 {
     public class TokenRepository : RepositoryBase, ITokenRepository
     {
-        public TokenRepository(ITwohireRestApiConfiguration configuration, ILogger<TokenRepository> logger, IHttpClientFactory httpClientFactory)
+        public TokenRepository(ITwohireClientConfiguration configuration, ILogger<TokenRepository> logger, IHttpClientFactory httpClientFactory)
             : base(configuration, logger, httpClientFactory, null)
         {
         }

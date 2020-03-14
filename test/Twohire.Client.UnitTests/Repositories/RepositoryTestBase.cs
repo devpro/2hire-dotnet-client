@@ -14,7 +14,7 @@ namespace Devpro.Twohire.Client.UnitTests.Repositories
             TokenProviderMock = new Mock<ITokenProvider>();
         }
 
-        protected ITwohireRestApiConfiguration Configuration { get; private set; }
+        protected ITwohireClientConfiguration Configuration { get; private set; }
 
         protected Mock<ITokenProvider> TokenProviderMock { get; private set; }
     }

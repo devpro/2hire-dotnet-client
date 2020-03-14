@@ -11,7 +11,7 @@ namespace Devpro.Twohire.Client.Repositories
     public class PersonalVehicleRepository : RepositoryBase, IPersonalVehicleRepository
     {
         public PersonalVehicleRepository(
-            ITwohireRestApiConfiguration configuration,
+            ITwohireClientConfiguration configuration,
             ILogger<PersonalVehicleRepository> logger,
             IHttpClientFactory httpClientFactory,
             ITokenProvider tokenProvider)

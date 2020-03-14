@@ -8,8 +8,11 @@ namespace Devpro.Twohire.Client.Providers
     public class TokenProvider : ITokenProvider
     {
         private readonly ITokenRepository _tokenRepository;
+
         private readonly ILogger<TokenProvider> _logger;
+
         private string _tokenValue;
+
         private DateTime _expirationTime;
 
         public TokenProvider(ILogger<TokenProvider> logger, ITokenRepository tokenRepository)

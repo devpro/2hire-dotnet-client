@@ -6,18 +6,18 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 namespace Devpro.Twohire.Client.DependencyInjection
 {
     /// <summary>
-    /// Service collection. extensions.
+    /// Service collection extensions.
     /// </summary>
     public static class ServiceCollectionExtensions
     {
         /// <summary>
         /// Add the dependency injection configuration.
         /// </summary>
-        /// <typeparam name="T">Instance of <see cref="ITwohireRestApiConfiguration"/></typeparam>
+        /// <typeparam name="T">Instance of <see cref="ITwohireClientConfiguration"/></typeparam>
         /// <param name="services">Collection of services that will be completed</param>
         /// <returns></returns>
         public static IServiceCollection AddTwohireClient<T>(this IServiceCollection services, T configuration)
-            where T : class, ITwohireRestApiConfiguration
+            where T : class, ITwohireClientConfiguration
         {
             if (services == null)
             {
@@ -29,7 +29,7 @@ namespace Devpro.Twohire.Client.DependencyInjection
                 throw new ArgumentNullException(nameof(configuration));
             }
 
-            services.TryAddTransient<ITwohireRestApiConfiguration, T>();
+            services.TryAddSingleton<ITwohireClientConfiguration>(configuration);
             services.TryAddSingleton<Abstractions.Providers.ITokenProvider, Providers.TokenProvider>();
             services.TryAddTransient<Abstractions.Repositories.IPersonalVehicleRepository, Repositories.PersonalVehicleRepository>();
             services.TryAddTransient<Abstractions.Repositories.ITokenRepository, Repositories.TokenRepository>();
