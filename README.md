@@ -77,11 +77,11 @@ For integration tests, to manage the configuration (secrets) you can create a fi
 <RunSettings>
   <RunConfiguration>
     <EnvironmentVariables>
-      <TwoHire_Sandbox_BaseUrl>xxx</TwoHire_Sandbox_BaseUrl>
-      <TwoHire_Sandbox_ApiVersion>xxx</TwoHire_Sandbox_ApiVersion>
-      <TwoHire_Sandbox_ServiceToken>xxx</TwoHire_Sandbox_ServiceToken>
-      <TwoHire_Sandbox_Username>xxx</TwoHire_Sandbox_Username>
-      <TwoHire_Sandbox_Password>xxx</TwoHire_Sandbox_Password>
+      <TwoHire__Sandbox__BaseUrl>xxx</TwoHire__Sandbox__BaseUrl>
+      <TwoHire__Sandbox__ApiVersion>xxx</TwoHire__Sandbox__ApiVersion>
+      <TwoHire__Sandbox__ServiceToken>xxx</TwoHire__Sandbox__ServiceToken>
+      <TwoHire__Sandbox__Username>xxx</TwoHire__Sandbox__Username>
+      <TwoHire__Sandbox__Password>xxx</TwoHire__Sandbox__Password>
     </EnvironmentVariables>
   </RunConfiguration>
 </RunSettings>
